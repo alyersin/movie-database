@@ -4,7 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename={"/<REPO>/"}>
+  <BrowserRouter basename={"/movie-database/"}>
     <App />
   </BrowserRouter>
 );
