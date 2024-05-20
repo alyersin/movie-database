@@ -16,7 +16,7 @@ export default function SearchBar({ input, onInputChange }) {
     }
     try {
       const res = await axios.get(
-        `http://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`
+        `https://www.omdbapi.com/?apikey=${API_KEY}&s=${query}`
       );
       if (res.data.Search) {
         setSuggestions(res.data.Search);
