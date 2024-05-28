@@ -12,7 +12,7 @@ export default function Card({ searchTerm }) {
     if (searchTerm && searchTerm !== "Search Movie Title...") {
       try {
         const res = await axios.get(
-          `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}`
+          `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}`
         );
         console.log(res.data);
         if (res.data.Search) {
