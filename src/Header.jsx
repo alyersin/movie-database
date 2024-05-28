@@ -10,7 +10,7 @@ export default function Header() {
       <header>
         <div className="logo">
           <a href="">
-            <img src="popcorn.png" alt="" />
+            <img src="src/popcorn.png" alt="" />
             MD
           </a>
         </div>
