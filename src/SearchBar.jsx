@@ -53,27 +53,25 @@ export default function SearchBar({ input, onInputChange }) {
   }, [input]);
 
   return (
-    <div className="search-container">
+    <form className="search-container">
       <h2>Search Movie:</h2>
-      <form>
-        <input
-          type="text"
-          value={input}
-          onClick={handleClick}
-          onChange={handleChange}
-          onFocus={() => setShowSuggestions(true)}
-          onBlur={() => setTimeout(() => setShowSuggestions(false), 100)}
-        />
-        {showSuggestions && suggestions.length > 0 && (
-          <ul className="suggestions-list">
-            {suggestions.map((suggestion, index) => (
-              <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
-                {suggestion.Title}
-              </li>
-            ))}
-          </ul>
-        )}
-      </form>
-    </div>
+      <input
+        type="text"
+        value={input}
+        onClick={handleClick}
+        onChange={handleChange}
+        onFocus={() => setShowSuggestions(true)}
+        onBlur={() => setTimeout(() => setShowSuggestions(false), 100)}
+      />
+      {showSuggestions && suggestions.length > 0 && (
+        <ul className="suggestions-list">
+          {suggestions.map((suggestion, index) => (
+            <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
+              {suggestion.Title}
+            </li>
+          ))}
+        </ul>
+      )}
+    </form>
   );
 }

@@ -17,10 +17,10 @@
   border: 1px solid #ccc;
 }
 
-form {
+/* form {
   width: 500px;
   border: 1px solid orange;
-}
+} */
 
 .suggestions-list {
   display: flex;
@@ -34,7 +34,7 @@ form {
   background: white;
   border: 1px solid #ccc;
   border-radius: 4px;
-  position: absolute;
+  /* position: absolute; */
   max-height: 200px;
   overflow-y: auto;
   z-index: 1000;
